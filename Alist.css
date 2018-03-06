@@ -601,14 +601,14 @@ ul {
 	color: white;
 	display: inline-block;
 	margin: 0px;
-	margin-left: 60px;
+	left:8vh;
 }
 .eventsBtnText {
 	font: 400 1.0em/1.3em 'Mukta Malar';
 	position: relative;
 	color: white;
 	margin: 0px;
-	margin-left: -120px;
+	margin-left: 6.5vh;
 	margin-top: 35px;
 	display: inline-block;
 }
@@ -618,14 +618,14 @@ ul {
 	color: white;
 	display: inline-block;
 	margin: 0px;
-	margin-left: 60px;
+	left:8vh;
 }
 .tasksBtnText {
 	font: 400 1.0em/1.3em 'Mukta Malar';
 	position: relative;
 	color: white;
 	margin: 0px;
-	margin-left: -140px;
+	margin-left: 7vh;
 	margin-top: -5px;
 	display: inline-block;
 }
