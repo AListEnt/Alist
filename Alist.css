@@ -316,8 +316,7 @@ ul {
 	flex-basis: 650px;
 	flex-grow: 1;
 	flex-shrink: 1;
-	/*left:50%;
-	margin-left:-235px;*/
+	
 }
 .calendarBox {
 	flex-basis: 260px;
@@ -352,8 +351,7 @@ ul {
 	top: 20px;
 	margin-right: 20px;
 	margin-left: 10px;
-	/*left:65%;
-	margin-right:10px;*/
+	
 }
 .eventsTab {
 	width: 100%;
@@ -756,8 +754,7 @@ input:checked+.slider:before {
 	@media screen and (max-width:1240px) {
 		.tasksBox {
 			flex-basis: 100%;
-			/*left:65%;
-	margin-right:10px;*/
+			
 		}
 		.mainTemp {
 			left: 38%;
