@@ -25,7 +25,7 @@ $(document).ready(function() {
 		console.log(sliderColor);
 
 	});*/
-	$('.overdueBox').html('<p class="overdueText">' + 'You have ' + overdue + ' OVERDUE TASKS. </p>');
+	$('.overdueBox').html('<p class="overdueText">' + 'You have ' + '<span class="bigNum">' + overdue + '</span>' + ' OVERDUE TASKS. </p>');
 	if (overdue == 0) {
 		$('.overdueBox').remove();
 	}
