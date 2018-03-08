@@ -55,6 +55,22 @@ $(document).ready(function() {
 			$(this).prepend('<div class="complexBox upBox">' + '<p class="complexText">' + amount + '</p>' + '<i class="fa fa-angle-down">' + '</i>' + '</div>');
 		}
 	});
+	$('.tasksName').each(function(){
+	var titleText = $(this).html();
+	var newTitle = titleText.slice(0, -4);
+var titleLength = $(this)[0].clientWidth;
+if(titleLength >= 246){
+	console.log($(this))
+	$(this)[0].innerHTML = newTitle + '...';
+}
+
+
+
+
+});
+	
+	
+	
 	$('.complexBox').click(function() {
 		var boxParents = $(this).parent();
 		var amount = $(boxParents)[0].dataset.complex;
