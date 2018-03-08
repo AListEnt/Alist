@@ -55,6 +55,7 @@ $(document).ready(function() {
 			$(this).prepend('<div class="complexBox upBox">' + '<p class="complexText">' + amount + '</p>' + '<i class="fa fa-angle-down">' + '</i>' + '</div>');
 		}
 	});
+	// Goes through each tasksname (Title) and gets the html (the text and makes a new variable by clicing off 4 characters. It then gets the width of the div and if it is bigger or equal to 246, it replaces the html with the slliced version of it and adds ...
 	$('.tasksName').each(function(){
 	var titleText = $(this).html();
 	var newTitle = titleText.slice(0, -4);
@@ -63,14 +64,8 @@ if(titleLength >= 246){
 	console.log($(this))
 	$(this)[0].innerHTML = newTitle + '...';
 }
-
-
-
-
 });
-	
-	
-	
+		
 	$('.complexBox').click(function() {
 		var boxParents = $(this).parent();
 		var amount = $(boxParents)[0].dataset.complex;
