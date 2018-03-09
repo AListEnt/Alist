@@ -62,7 +62,7 @@
 }
 	.calendar-head-card .calendar-year,
 	.calendar-head-card .calendar-date-wrapper { 
-		color: rgb(220,220,220);
+		color:white;
 		display: block;
 	}
 	.calendar-head-card .calendar-date-wrapper {
@@ -203,7 +203,7 @@
 		}
 
 /* Color theme */
-.calendar-wrapper[data-theme='blue'] .calendar-head-card { background-color: #1565c0; }
+.calendar-wrapper[data-theme='blue'] .calendar-head-card { background-color: #f5a623; }
 .calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.current a { color: #1976d2; }
 .calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.selected a { border-color: #1976d2; }
 .calendar-wrapper[data-theme='blue'] .calendar-date-holder .calendar-dates .date.selected a:hover { border-color: #0d47a1; }
