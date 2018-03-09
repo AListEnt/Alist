@@ -402,8 +402,9 @@ ul {
 }
 .eventDetails {
 	position: relative;
-	left: 10%;
+	left: 5%;
 	top: 10%;
+	    height: 40px;
 	display: inline-block;
 }
 .eventDetails2 {
