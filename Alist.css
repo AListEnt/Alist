@@ -5,7 +5,8 @@
 	border-right: 1px solid lightgrey;
 	display: inline-block;
 	position: relative;
-	float: left;
+	float:left;
+
 	z-index: 3;
 }
 body {
@@ -15,8 +16,9 @@ body {
 html, body {
 	margin: 0px;
 	padding: 0px;
-	height: 100%;
-	min-height: 100%;
+
+  height: 100%;
+  min-height: 100%;
 }
 * {}
 .infoBox {
@@ -34,18 +36,19 @@ html, body {
 	width: 100%;
 	height: 610px;
 	display: flex;
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	margin: 0px;
+	 display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+	margin:0px;
 }
 .panelContainer {
 	width: 225px;
 	height: 100%;
 	border-right: 1px solid lightgrey;
 	position: relative;
-	float: left;
+	float:left;
+
 }
 .logo {
 	height: 90px;
@@ -57,7 +60,7 @@ html, body {
 	margin-top: 13px;
 	display: inline-block;
 	position: absolute;
-	padding-top:-8px;
+	padding-top: -8px;
 	font: 600 1.3em/1.3em 'Mukta Malar';
 	color: #5e6163;
 }
@@ -80,27 +83,28 @@ html, body {
 	width: 365px;
 	height: 105px;
 	position: absolute;
-	display: inline-block;
+	display: flex;
 	left: 75%;
 	top: 5.5%;
 	font: 300 1.12em/1.3em 'Mukta Malar';
 }
 .tempToday {
-	width: 105px;
+	flex-basis:105px;
+	flex-grow:1;
+	flex-shrink:1;
 	height: 100%;
 	text-align: center;
 	display: inline-block;
 }
 .tempOne {
-	margin: 0px;
-	font-size: 30px;
-	padding: 0px;
-	color: #a5c13e;
-	display: inline-block;
-	height: 65px;
-	margin-top: -20px;
-	width: 79.5px;
-	font: 300 2.5em/1.5em 'Mukta Malar';
+    margin: 0px;
+    margin-top: -25px;
+    margin-bottom: 15px;
+    font-size: 30px;
+    padding: 0px;
+    color: #a5c13e;
+    height: 40px;
+    font: 300 2.5em/1.5em 'Mukta Malar';
 }
 #navDate {
 	margin-top: -2.5px;
@@ -123,87 +127,74 @@ html, body {
 	position: relative;
 }
 .tempTwo {
-	height: 100%;
-	display: inline-block;
-	position: absolute;
-	border-right: 0.5px solid lightgrey;
-	border-left: 0.5px solid lightgrey;
-	width: 79.5px;
+	
+    height: 95px;
+    flex-basis: 79.5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
+    border-right: 0.5px solid lightgrey;
+    border-left: 0.5px solid lightgrey;
 }
 .tempTwoDay {
-	width: 50px;
-	height: 20px;
-	margin: 0px;
-	margin-left: 10px;
-	position: absolute;
+    height: 20px;
+    margin: 0px;
 }
 .tempTwoPic {
-	height: 27px;
-	position: relative;
-	left: 50%;
-	top: 42px;
-	margin-left: -13.5px;
+    height: 27px;
+    position: relative;
+    top: 22px;
 }
 .tempTwoText {
-	position: relative;
-	top: 34%;
-	margin-left: 25px;
-	color: black;
+    position: relative;
+    margin-top: 5px;
+    color: black;
+    margin-left: 2px;
 }
 .tempThree {
-	height: 100%;
-	display: inline-block;
-	position: absolute;
-	left: 53%;
-	border-right: 0.5px solid lightgrey;
-	width: 79.5px;
+    height: 95px;
+    flex-basis: 79.5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
+    border-right: 0.5px solid lightgrey;
 }
 .tempThreeDay {
-	width: 50px;
-	height: 20px;
-	margin: 0px;
-	margin-left: -1.5px;
-	position: absolute;
+    height: 20px;
+    margin: 0px;
 }
 .tempThreePic {
-	height: 27px;
-	position: relative;
-	left: 50%;
-	top: 42px;
-	margin-left: -13.5px;
+    height: 27px;
+    position: relative;
+    top: 22px;
 }
 .tempThreeText {
-	position: relative;
-	top: 34%;
-	margin-left: 25px;
-	color: black;
+    position: relative;
+    margin-top: 5px;
+    color: black;
+    margin-left: 2px;
 }
 .tempFour {
-	height: 100%;
-	display: inline-block;
-	position: absolute;
-	left: 76%;
-	width: 76.5px;
+    height: 95px;
+    flex-basis: 79.5px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    text-align: center;
 }
 .tempFourDay {
-	width: 50px;
-	height: 20px;
-	margin: 0px;
-	margin-left: 9px;
-	position: absolute;
+    height: 20px;
+    margin: 0px;
 }
 .tempFourPic {
-	height: 27px;
-	position: relative;
-	left: 50%;
-	top: 42px;
-	margin-left: -13.5px;
+    height: 27px;
+    position: relative;
+    top: 22px;
 }
 .tempFourText {
-	position: relative;
-	top: 34%;
-	margin-left: 25px;
-	color: black;
+    position: relative;
+    margin-top: 5px;
+    color: black;
+    margin-left: 2px;
 }
 #daySymbol {
 	font-size: 14px;
@@ -250,7 +241,8 @@ html, body {
 	display: inline-block;
 	padding: 0px;
 	position: relative;
-	float: left;
+	float:left;
+
 }
 .mainNav {
 	width: 100%;
@@ -262,6 +254,7 @@ html, body {
 	color: #2786ca;
 	font-size: 28px;
 }
+
 .toolBar {
 	height: 42px;
 	width: 100%;
@@ -295,8 +288,8 @@ ul {
 	height: 100%;
 	margin: 0px;
 	padding: 0px;
-	display: flex;
-	height: 100%;
+	  display: flex;
+  height: 100%;
 }
 .eventsContainer {
 	border: solid #bcbcbc 2px;
@@ -313,18 +306,17 @@ ul {
 	position: relative;
 	margin-left: 10px;
 	margin-right: 10px;
-	flex-basis: 650px;
-	flex-grow: 1;
-	flex-shrink: 1;
-	
+	flex-basis:  650px;
+	flex-grow:1;
+		flex-shrink:1;
 }
 .calendarBox {
-	flex-basis: 260px;
-	flex-grow: 1;
-	flex-shrink: 1;
+		flex-basis:  260px;
+	flex-grow:1;
+		flex-shrink:1;
 	height: 200px;
 	position: relative;
-	float: left;
+	float:left;
 	top: 20px;
 	text-align: center;
 	background-color: white;
@@ -344,14 +336,13 @@ ul {
 }
 .tasksBox {
 	height: 495px;
-	flex-basis: 650px;
-	flex-grow: 1;
-	flex-shrink: 1;
+	flex-basis:  650px;
+	flex-grow:1;
+	flex-shrink:1;
 	position: relative;
 	top: 20px;
 	margin-right: 20px;
-	margin-left: 10px;
-	
+		margin-left: 10px;
 }
 .eventsTab {
 	width: 100%;
@@ -420,7 +411,7 @@ ul {
 	display: inline-block;
 	left: 2%;
 	position: relative;
-	top: 55%;
+	top: 67%;
 }
 .nameTabs:hover {
 	-webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
@@ -429,7 +420,7 @@ ul {
 }
 .navDateText {
 	display: inline-block;
-	font: 600 .95em/1.3em 'Mukta Malar';
+	font:600 .65em/1.3em 'Mukta Malar';
 }
 .project {
 	font: 400 .8em/1.3em 'Mukta Malar';
@@ -473,14 +464,14 @@ ul {
 	text-align: left;
 	cursor: pointer;
 }
-.bigNum {
-	font-size: 23px;
+.bigNum{
+	font-size:23px;
 }
-.bigNumNav {
-	font-size: 33px;
+.bigNumNav{
+    font-size: 23px;
 }
-.bigNumEvent {
-	font-size: 25px;
+.bigNumEvent{
+	font-size:25px;
 }
 .overdueText {
 	font: 600 1.5em/1.3em 'Mukta Malar';
@@ -501,15 +492,15 @@ ul {
 	margin: 0px;
 }
 .complexBox {
-	width: 40px;
-	height: 40px;
+	width: 35px;
+	height: 35px;
 	border-radius: 50%;
 	background-color: #9ba2a8;
 	text-align: center;
 	display: inline-block;
 	margin-left: 5px;
 	position: relative;
-	bottom: 10px;
+	bottom: 4px;
 	cursor: pointer;
 }
 .complexText {
@@ -570,16 +561,14 @@ ul {
 .projectsTabText {
 	font: 400 1.5em/1.3em 'Mukta Malar';
 	position: relative;
-	height: 55px;
-	width:190px;
+	height: 55px width:190px;
 	color: white;
 	display: inline-block;
 }
 .tasksTabText {
 	font: 400 1.5em/1.3em 'Mukta Malar';
 	position: relative;
-	height: 55px;
-	width:190px;
+	height: 55px width:190px;
 	color: white;
 	display: inline-block;
 }
@@ -606,7 +595,7 @@ ul {
 	color: white;
 	display: inline-block;
 	margin: 0px;
-	left: 8vh;
+	left:8vh;
 }
 .eventsBtnText {
 	font: 400 1.0em/1.3em 'Mukta Malar';
@@ -623,7 +612,7 @@ ul {
 	color: white;
 	display: inline-block;
 	margin: 0px;
-	left: 8vh;
+	left:8vh;
 }
 .tasksBtnText {
 	font: 400 1.0em/1.3em 'Mukta Malar';
@@ -724,61 +713,80 @@ input:checked+.slider:before {
 	-webkit-transition: .4s;
 	transition: .4s;
 }
-.fa-angle-down {
-	position: relative;
-	top: 12px;
-	right: 6.5px;
-	color: white;
+.fa-angle-down{
+	    position: relative;
+    top: 8px;
+    right: 6.5px;
+    color: white;
 }
-.complexText {
-	margin-left: 5.75px;
+.complexText{
+	    margin-left: 5.75px;
 }
-.blueBg {
-	background-color: #2b88c7;
-	transition: background-color 0.35s ease;
+.blueBg{
+	background-color:#2b88c7;
+	transition:background-color 0.35s ease;
+}
+.arrow{
+	position:absolute;
+	left:385%;
+bottom:10px;
+}
+.fa-angle-right{
+	height:20px;
+	width:20px;
+	cursor:pointer;
 }
 @media screen and (max-width:1680px) {
 	.mainTemp {
-		left: 70%;
-	}
-	@media screen and (max-width:1480px) {
+
+	left: 70%;
+}
+}
+@media screen and (max-width:1480px) {
 		.mainTemp {
-			left: 65%;
-		}
-	}
-	@media screen and (max-width:1380px) {
-		.mainTemp {
-			left: 60%;
-		}
-	}
-	@media screen and (max-width:1240px) {
-		.tasksBox {
-			flex-basis: 100%;
-			
-		}
-		.mainTemp {
-			left: 38%;
-		}
-		.mainNavDate {
-			font-size: 20px;
-		}
-		.eventsBox {
-			margin-bottom: 70px;
-			margin-top: 70px;
-			flex-basis: 100%;
-		}
-		.boxHolder {
-			flex-wrap: wrap;
-		}
-		.calendarBox {
-			position: relative;
-			top: 20px;
-			left: 50%;
-			flex: none;
-			margin-left: -142px;
-			display: inline-block;
-			text-align: center;
-			background-color: white;
-			margin-right: 10px;
-		}
-	}
+
+	left: 65%;
+}
+}
+
+@media screen and (max-width:1380px) {
+			.mainTemp {
+
+	left: 60%;
+}
+}
+
+	
+@media screen and (max-width:1240px) {
+	.tasksBox {
+flex-basis: 100%;
+
+}
+			.mainTemp {
+
+	left: 38%;
+}
+.mainNavDate{
+	font-size:20px;
+}
+.eventsBox{
+margin-bottom:70px;
+margin-top:70px;
+flex-basis: 100%;
+}
+.boxHolder{
+	flex-wrap:wrap;
+}
+
+.calendarBox {
+	position: relative;
+	top: 20px;
+	left:50%;
+	flex:none;
+	margin-left:-142px;
+	display:inline-block;
+	text-align: center;
+	background-color: white;
+	margin-right: 10px;
+}
+}
