@@ -54,4 +54,11 @@ $(document).ready(function() {
 		var amount = $(boxParents)[0].dataset.complex;
 		$(this).toggleClass('blueBg');
 	});
+	
+		$('.navPanel').each(function() {
+var thePage = $(this)[0].dataset.page;
+var theTab = $(this).find('.' + thePage);
+$(theTab).css('background-color', "#d9e9f5");
+	});
+	
 });
