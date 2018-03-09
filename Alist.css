@@ -82,7 +82,8 @@ html, body {
 	position: absolute;
 	display: flex;
 	left: 75%;
-	top: 5.5%;
+	    top: 105.5px;
+    margin-top: -52.5px;
 	font: 300 1.12em/1.3em 'Mukta Malar';
 }
 .tempToday {
