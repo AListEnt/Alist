@@ -1,236 +1,237 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-  <meta content="width=device-width,initial-scale=1" name="viewport">
-  <link href="https://fonts.googleapis.com/css?family=Mukta+Malar:200,300,400,600,700" rel="stylesheet">
-  <link href="Alist.css" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-  </script>
-  <link href="dcalendar.picker.css" rel="stylesheet">
-  <script src="concept.js">
-  </script>
-  <script src="dcalendar.picker.js">
-  </script>
-  <script src="testing.js">
-  </script>
-  <title>A-List Plus</title>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width,initial-scale=1" name="viewport">
+	<link href="https://fonts.googleapis.com/css?family=Mukta+Malar:200,300,400,600,700" rel="stylesheet">
+	<link href="Alist.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<link href="dcalendar.picker.css" rel="stylesheet">
+	<script src="concept.js">
+	</script>
+	<script src="dcalendar.picker.js">
+	</script>
+	<script src="testing.js">
+	</script>
+	<title>A-List Plus</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-      <div class="navPanel">
-        <div class="infoBox">
-          <div class="logo"><img alt="logo" id="logoPic" src="a-list-logo.png"></div>
-          <div class="nameBox">
-            <h3 id="navName"><b>John Smith Jr.</b></h3>
-            <h3 id="navDate">January 14, 2018</h3>
-          </div>
-        </div>
-        <div class="panelTabs">
-          <div class="tab dash">
-            <div class="tabPic"><img src="today.png"></div>
-            <p class="tabText dashText">Dashboard</p>
-          </div>
-          <div class="tab contacts">
-            <div class="tabPic"><img src="contacts.png"></div>
-            <p class="tabText contactsText">Contacts</p>
-          </div>
-          <div class="tab events">
-            <div class="tabPic"><img src="events.png"></div>
-            <p class="tabText eventsText">Events</p>
-          </div>
-          <div class="tab tasks">
-            <div class="tabPic"><img src="tasks.png"></div>
-            <p class="tabText tasksText">Tasks</p>
-          </div>
-          <div class="tab notes">
-            <div class="tabPic"><img src="notes.png"></div>
-            <p class="tabText notesText">Notes</p>
-          </div>
-          <div class="tab passwords">
-            <div class="tabPicPS"><img src="ps.png"></div>
-            <p class="tabText passwordsText">Passwords</p>
-          </div>
-          <div class="tab projects">
-            <div class="tabPic"><img src="projects.png"></div>
-            <p class="tabText projectsText">Projects</p>
-          </div>
-          <div class="tab logout">
-            <div class="tabPic"><i class="fa fa-arrow-circle-o-left" aria-hidden="true" style="margin-top:5px;"></i></div>
-            <p class="tabText projectsText">Sign Out</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="main">
-        <div class="toolBar">
-          <div class="icons">
-            <div class="icon searchPic"><img src="search.png"></div>
-            <div class="icon addPic"><img src="add.png"></div>
-            <div class="icon dotsPic"><img src="dots.png"></div>
-          </div>
-        </div>
-        <div class="mainNav">
-          <div class="mainNavDate">
-            <p class="navDateText">Monday January <span class="bigNumNav">19, 2018</span></p>
-          </div>
-          <div class="mainTemp">
-            <div class="tempToday">
-              <h3 class="tempOne">12<span id="symbol">°</span></h3><br>
-              <p id="place">Columbus Ohio</p><br>
-              <p id="desc">Mostly cloudy</p>
-            </div>
-            <div class="tempTwo">
-              <p class="tempTwoDay">Tues</p><img alt="cloud" class="tempTwoPic" src="cloud.png">
-              <div class="tempTwoText">
-                12<span id="daySymbol">°</span>
-              </div>
-            </div>
-            <div class="tempThree">
-              <p class="tempThreeDay">Weds</p><img alt="cloud" class="tempThreePic" src="sun.png">
-              <div class="tempThreeText">
-                20<span id="daySymbol">°</span>
-              </div>
-            </div>
-            <div class="tempFour">
-              <p class="tempFourDay">Thur</p><img alt="cloud" class="tempFourPic" src="sun.png">
-              <div class="tempFourText">
-                14<span id="daySymbol">°</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="boxHolder">
-          <div class="calendarBox">
-            <div id="calendar-demo"></div>
-          </div>
-          <div class="eventsBox">
-            <div class="eventsContainer">
-              <div class="nameTabs eventsTab">
-                <div class="eventsTabText">
-                  <p class="eventsBtnText">Events</p>
-                  <p class="eventsAddBtn">(+) Add</p>
-                </div>
-              </div>
-              <div class="event">
-                <div class="eventDetails">
-                  <p class="eventName">Cheri Workout</p>
-                  <p class="eventDate">Date</p>
-                </div>
-                <div class="eventDetails2">
-                  <p class="eventTime"><span class="bigNumEvent">5 </span>AM</p>
-                  <p class="eventTime"><span class="bigNumEvent">10 </span>PM</p>
-                </div>
-              </div>
-              <div class="event">
-                <div class="eventDetails">
-                  <p class="eventName">Cheri Workout</p>
-                  <p class="eventDate">Date</p>
-                </div>
-                <div class="eventDetails2">
-                  <p class="eventTime"><span class="bigNumEvent">9 </span>AM</p>
-                  <p class="eventTime"><span class="bigNumEvent">10 </span>AM</p>
-                </div>
-              </div>
-              <div class="event">
-                <div class="eventDetails">
-                  <p class="eventName">Cheri Workout</p>
-                  <p class="eventDate">Date</p>
-                </div>
-                <div class="eventDetails2">
-                  <p class="eventTime"><span class="bigNumEvent">7 </span>AM</p>
-                  <p class="eventTime"><span class="bigNumEvent">1 </span>AM</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="tasksBox">
-            <div class="tasksContainer">
-              <div class="nameTabs tasksTab">
-                <div class="tasksTabText">
-                  <p class="tasksBtnText">Tasks</p>
-                  <p class="tasksAddBtn">(+) Add</p>
-                </div>
-              </div>
-              <div class="overdueBox"></div>
-              <div class="task">
-                <div class="tasksDetails">
-                  <p class="tasksName">Pick up trash from party.</p>
-                  <p class="tasksDate">Date</p>
-                </div>
-                <div class="sliderBox">
-                  <label class="switch"><input class="slide" type="checkbox"> <span class="slider" data-bg="" id="sliderTest"></span></label>
-                </div>
-              </div>
-              <div class="task">
-                <div class="tasksDetails">
-                  <p class="tasksName">Pickup friends from gym.</p>
-                  <p class="tasksDate">Date</p>
-                </div>
-                <div class="sliderBox">
-                  <label class="switch"><input class="slide" type="checkbox"> <span class="slider" data-bg=""></span></label>
-                </div>
-              </div>
-              <div class="task" data-complex="0">
-                <div class="tasksDetails" data-complex="0">
-                  <p class="tasksName">Plan an event</p>
-                  <p class="tasksDate">Date</p>
-                </div>
-                <div class="sliderBox">
-                  <label class="switch"><input class="slide" type="checkbox"> <span class="slider" id="sliderTest2"></span></label>
-                </div>
-              </div>
-              <div class="task" data-complex="5">
-                <div class="tasksDetails" data-complex="5">
-                  <p class="tasksName">Solicit reviews</p>
-                  <p class="tasksDate">Date</p>
-                </div>
-                <div class="sliderBox">
-                  <label class="switch"><input class="slide" type="checkbox"> <span class="slider" data-bg=""></span></label>
-                </div>
-              </div>
-              <div class="task" data-complex="9">
-                <div class="tasksDetails" data-complex="9">
-                  <p class="tasksName">Buy a new car for road trip.</p>
-                  <p class="tasksDate">Date</p>
-                </div>
-                <div class="sliderBox">
-                  <label class="switch"><input class="slide" type="checkbox"> <span class="slider" data-bg=""></span></label>
-                </div>
-              </div>
-              <div class="task" data-complex="6">
-                <div class="tasksDetails" data-complex="6">
-                  <p class="tasksName">Pick up groceries</p>
-                  <p class="tasksDate">Date</p>
-                </div>
-                <div class="sliderBox">
-                  <label class="switch"><input class="slide" type="checkbox"> <span class="slider" id="sliderTest"></span></label>
-                </div>
-              </div>
-              <div class="task" data-complex="0">
-                <div class="tasksDetails" data-complex="0">
-                  <p class="tasksName">Cheri Workout/ and yoga</p>
-                  <p class="tasksDate">Date</p>
-                </div>
-                <div class="sliderBox">
-                  <label class="switch"><input class="slide" type="checkbox"> <span class="slider" id="sliderTest"></span></label>
-                </div>
-              </div>
-              <div class="task" data-complex="1">
-                <div class="tasksDetails" data-complex="1">
-                  <p class="tasksName">Cheri Workout</p>
-                  <p class="tasksDate">Date</p>
-                </div>
-                <div class="sliderBox">
-                  <label class="switch"><input class="slide" type="checkbox"> <span class="slider"></span></label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
+	<div class="container">
+		<div class="navPanel">
+			<div class="infoBox">
+				<div class="logo"><img alt="logo" id="logoPic" src="a-list-logo.png"></div>
+				<div class="nameBox">
+					<h3 id="navName"><b>John Smith Jr.</b></h3>
+					<h3 id="navDate">January 14, 2018</h3>
+				</div>
+			</div>
+			<div class="panelTabs">
+				<div class="tab dash">
+					<div class="tabPic"><img src="today.png"></div>
+					<p class="tabText dashText">Dashboard</p>
+				</div>
+				<div class="tab contacts">
+					<div class="tabPic"><img src="contacts.png"></div>
+					<p class="tabText contactsText">Contacts</p>
+				</div>
+				<div class="tab events">
+					<div class="tabPic"><img src="events.png"></div>
+					<p class="tabText eventsText">Events</p>
+				</div>
+				<div class="tab tasks">
+					<div class="tabPic"><img src="tasks.png"></div>
+					<p class="tabText tasksText">Tasks</p>
+				</div>
+				<div class="tab notes">
+					<div class="tabPic"><img src="notes.png"></div>
+					<p class="tabText notesText">Notes</p>
+				</div>
+				<div class="tab passwords">
+					<div class="tabPicPS"><img src="ps.png"></div>
+					<p class="tabText passwordsText">Passwords</p>
+				</div>
+				<div class="tab projects">
+					<div class="tabPic"><img src="projects.png"></div>
+					<p class="tabText projectsText">Projects</p>
+				</div>
+				<div class="tab logout">
+					<div class="tabPic">
+						<i aria-hidden="true" class="fa fa-arrow-circle-o-left" style="margin-top:5px;"></i>
+					</div>
+					<p class="tabText projectsText">Sign Out</p>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="toolBar">
+				<div class="icons">
+					<div class="icon searchPic"><img src="search.png"></div>
+					<div class="icon addPic"><img src="add.png"></div>
+					<div class="icon dotsPic"><img src="dots.png"></div>
+				</div>
+			</div>
+			<div class="mainNav">
+				<div class="mainNavDate">
+					<p class="navDateText">Monday January <span class="bigNumNav">19, 2018</span></p>
+				</div>
+				<div class="mainTemp">
+					<div class="tempToday">
+						<h3 class="tempOne">12<span id="symbol">°</span></h3><br>
+						<p id="place">Columbus Ohio</p><br>
+						<p id="desc">Mostly cloudy</p>
+					</div>
+					<div class="tempTwo">
+						<p class="tempTwoDay">Tues</p><img alt="cloud" class="tempTwoPic" src="cloud.png">
+						<div class="tempTwoText">
+							12<span id="daySymbol">°</span>
+						</div>
+					</div>
+					<div class="tempThree">
+						<p class="tempThreeDay">Weds</p><img alt="cloud" class="tempThreePic" src="sun.png">
+						<div class="tempThreeText">
+							20<span id="daySymbol">°</span>
+						</div>
+					</div>
+					<div class="tempFour">
+						<p class="tempFourDay">Thur</p><img alt="cloud" class="tempFourPic" src="sun.png">
+						<div class="tempFourText">
+							14<span id="daySymbol">°</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="boxHolder">
+				<div class="calendarBox">
+					<div id="calendar-demo"></div>
+				</div>
+				<div class="eventsBox">
+					<div class="eventsContainer">
+						<div class="nameTabs eventsTab">
+							<div class="eventsTabText">
+								<p class="eventsBtnText">Events</p>
+								<p class="eventsAddBtn">(+) Add</p>
+							</div>
+						</div>
+						<div class="event">
+							<div class="eventDetails">
+								<p class="eventName">Cheri Workout</p>
+								<p class="eventDate">Date</p>
+							</div>
+							<div class="eventDetails2">
+								<p class="eventTime"><span class="bigNumEvent">5</span> AM</p>
+								<p class="eventTime"><span class="bigNumEvent">10</span> PM</p>
+							</div>
+						</div>
+						<div class="event">
+							<div class="eventDetails">
+								<p class="eventName">Cheri Workout</p>
+								<p class="eventDate">Date</p>
+							</div>
+							<div class="eventDetails2">
+								<p class="eventTime"><span class="bigNumEvent">9</span> AM</p>
+								<p class="eventTime"><span class="bigNumEvent">10</span> AM</p>
+							</div>
+						</div>
+						<div class="event">
+							<div class="eventDetails">
+								<p class="eventName">Cheri Workout</p>
+								<p class="eventDate">Date</p>
+							</div>
+							<div class="eventDetails2">
+								<p class="eventTime"><span class="bigNumEvent">7</span> AM</p>
+								<p class="eventTime"><span class="bigNumEvent">1</span> AM</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tasksBox">
+					<div class="tasksContainer">
+						<div class="nameTabs tasksTab">
+							<div class="tasksTabText">
+								<p class="tasksBtnText">Tasks</p>
+								<p class="tasksAddBtn">(+) Add</p>
+							</div>
+						</div>
+						<div class="overdueBox"></div>
+						<div class="task">
+							<div class="tasksDetails">
+								<p class="tasksName">Pick up trash from party.</p>
+								<p class="tasksDate">Date</p>
+							</div>
+							<div class="sliderBox">
+								<label class="switch"><input class="slide" type="checkbox"> <span class="slider" data-bg="" id="sliderTest"></span></label>
+							</div>
+						</div>
+						<div class="task">
+							<div class="tasksDetails">
+								<p class="tasksName">Pickup friends from gym.</p>
+								<p class="tasksDate">Date</p>
+							</div>
+							<div class="sliderBox">
+								<label class="switch"><input class="slide" type="checkbox"> <span class="slider" data-bg=""></span></label>
+							</div>
+						</div>
+						<div class="task" data-complex="0">
+							<div class="tasksDetails" data-complex="0">
+								<p class="tasksName">Plan an event</p>
+								<p class="tasksDate">Date</p>
+							</div>
+							<div class="sliderBox">
+								<label class="switch"><input class="slide" type="checkbox"> <span class="slider" id="sliderTest2"></span></label>
+							</div>
+						</div>
+						<div class="task" data-complex="5">
+							<div class="tasksDetails" data-complex="5">
+								<p class="tasksName">Solicit reviews</p>
+								<p class="tasksDate">Date</p>
+							</div>
+							<div class="sliderBox">
+								<label class="switch"><input class="slide" type="checkbox"> <span class="slider" data-bg=""></span></label>
+							</div>
+						</div>
+						<div class="task" data-complex="9">
+							<div class="tasksDetails" data-complex="9">
+								<p class="tasksName">Buy a new car for road trip.</p>
+								<p class="tasksDate">Date</p>
+							</div>
+							<div class="sliderBox">
+								<label class="switch"><input class="slide" type="checkbox"> <span class="slider" data-bg=""></span></label>
+							</div>
+						</div>
+						<div class="task" data-complex="6">
+							<div class="tasksDetails" data-complex="6">
+								<p class="tasksName">Pick up groceries</p>
+								<p class="tasksDate">Date</p>
+							</div>
+							<div class="sliderBox">
+								<label class="switch"><input class="slide" type="checkbox"> <span class="slider" id="sliderTest"></span></label>
+							</div>
+						</div>
+						<div class="task" data-complex="0">
+							<div class="tasksDetails" data-complex="0">
+								<p class="tasksName">Cheri Workout/ and yoga</p>
+								<p class="tasksDate">Date</p>
+							</div>
+							<div class="sliderBox">
+								<label class="switch"><input class="slide" type="checkbox"> <span class="slider" id="sliderTest"></span></label>
+							</div>
+						</div>
+						<div class="task" data-complex="1">
+							<div class="tasksDetails" data-complex="1">
+								<p class="tasksName">Cheri Workout</p>
+								<p class="tasksDate">Date</p>
+							</div>
+							<div class="sliderBox">
+								<label class="switch"><input class="slide" type="checkbox"> <span class="slider"></span></label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
