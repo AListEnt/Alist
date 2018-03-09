@@ -452,7 +452,7 @@ if (typeof jQuery === 'undefined') {
 		hide: function(callback) {
 			var that = this;
 			that.calendar.addClass('load');
-			that.calendar.parent().fadeOut(function() {
+			that.calendar.parent().fadeIn(function() {
 				$('body').removeAttr('datepicker-display');
 				if (callback) callback();
 				if (that.elem.is('input')) that.elem.focus();
