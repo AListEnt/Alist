@@ -57,6 +57,7 @@ html, body {
 	margin-top: 13px;
 	display: inline-block;
 	position: absolute;
+	padding-top: -8px;
 	font: 600 1.3em/1.3em 'Mukta Malar';
 	color: #5e6163;
 }
@@ -344,6 +345,7 @@ ul {
 	height: 35px;
 	text-align: center;
 	cursor: pointer;
+	display: flex;
 }
 .projectsTab {
 	width: 100%;
@@ -368,7 +370,8 @@ ul {
 .eventsTabText {
 	font: 400 1.5em/1.3em 'Mukta Malar';
 	position: relative;
-	top: -90%;
+	height: 55px;
+	width: 65px;
 	color: white;
 	display: inline-block;
 }
@@ -414,6 +417,7 @@ ul {
 .navDateText {
 	display: inline-block;
 	font: 600 .65em/1.3em 'Mukta Malar';
+	font-size: 20px;
 }
 .project {
 	font: 400 .8em/1.3em 'Mukta Malar';
@@ -461,7 +465,7 @@ ul {
 	font-size: 23px;
 }
 .bigNumNav {
-	font-size: 23px;
+	font-size: 24px;
 }
 .bigNumEvent {
 	font-size: 25px;
@@ -537,6 +541,7 @@ ul {
 	height: 35px;
 	text-align: center;
 	cursor: pointer;
+	display: flex;
 }
 .tasksTabText {
 	font: 400 1.5em/1.3em 'Mukta Malar';
@@ -555,7 +560,7 @@ ul {
 	font: 400 1.5em/1.3em 'Mukta Malar';
 	position: relative;
 	height: 55px;
-	width:190px;
+	width: 190px;
 	color: white;
 	display: inline-block;
 }
@@ -563,7 +568,23 @@ ul {
 	font: 400 1.5em/1.3em 'Mukta Malar';
 	position: relative;
 	height: 55px;
-	width:190px;
+	width: 60px;
+	color: white;
+	display: inline-block;
+}
+.tasksAddBox {
+	font: 400 1.5em/1.3em 'Mukta Malar';
+	position: relative;
+	height: 55px;
+	width: 80px;
+	color: white;
+	display: inline-block;
+}
+.eventsAddBox {
+	font: 400 1.5em/1.3em 'Mukta Malar';
+	position: relative;
+	height: 55px;
+	width: 80px;
 	color: white;
 	display: inline-block;
 }
@@ -590,15 +611,15 @@ ul {
 	color: white;
 	display: inline-block;
 	margin: 0px;
-	left: 8vh;
+	left: 50vh;
 }
 .eventsBtnText {
 	font: 400 1.0em/1.3em 'Mukta Malar';
 	position: relative;
 	color: white;
 	margin: 0px;
-	margin-left: 6.5vh;
-	margin-top: 35px;
+	left: 1.3vh;
+	margin-top: -5px;
 	display: inline-block;
 }
 .tasksAddBtn {
@@ -607,14 +628,14 @@ ul {
 	color: white;
 	display: inline-block;
 	margin: 0px;
-	left: 8vh;
+	left: 50vh;
 }
 .tasksBtnText {
 	font: 400 1.0em/1.3em 'Mukta Malar';
 	position: relative;
 	color: white;
 	margin: 0px;
-	margin-left: 7vh;
+	left: 1.3vh;
 	margin-top: -5px;
 	display: inline-block;
 }
@@ -731,24 +752,56 @@ input:checked+.slider:before {
 	width: 20px;
 	cursor: pointer;
 }
+@media screen and (max-width:1720px) {
+	.tasksAddBtn {
+		left: 40vh;
+	}
+	.eventsAddBtn {
+		left: 40vh;
+	}
+}
 @media screen and (max-width:1680px) {
 	.mainTemp {
 		left: 70%;
+	}
+	.tasksAddBtn {
+		left: 35vh;
+	}
+	.eventsAddBtn {
+		left: 35vh;
 	}
 }
 @media screen and (max-width:1480px) {
 	.mainTemp {
 		left: 65%;
 	}
+	.tasksAddBtn {
+		left: 30vh;
+	}
+	.eventsAddBtn {
+		left: 30vh;
+	}
 }
 @media screen and (max-width:1380px) {
 	.mainTemp {
 		left: 60%;
 	}
+	.tasksAddBtn {
+		left: 23vh;
+	}
+	.eventsAddBtn {
+		left: 23vh;
+	}
 }
 @media screen and (max-width:1240px) {
 	.tasksBox {
 		flex-basis: 100%;
+	}
+	.tasksAddBtn {
+		left: 80vh;
+	}
+	.eventsAddBtn {
+		left: 80vh;
 	}
 	.mainTemp {
 		left: 38%;
@@ -774,5 +827,21 @@ input:checked+.slider:before {
 		text-align: center;
 		background-color: white;
 		margin-right: 10px;
+	}
+}
+@media screen and (max-width:1075px) {
+	.tasksAddBtn {
+		left: 70vh;
+	}
+	.eventsAddBtn {
+		left: 70vh;
+	}
+}
+@media screen and (max-width:985px) {
+	.tasksAddBtn {
+		left: 60vh;
+	}
+	.eventsAddBtn {
+		left: 60vh;
 	}
 }
