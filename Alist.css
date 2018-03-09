@@ -71,6 +71,14 @@ html, body {
 	margin-top: 10px;
 	display: inline-block;
 }
+.tabPicLO {
+	margin-left: 33px;
+	margin-top: 10px;
+	display: inline-block;
+}
+.fa-arrow-circle-o-left:before {
+    color: #5d5d5d;
+}
 #logoPic {
 	left: 50%;
 	position: relative;
