@@ -12,11 +12,11 @@ $(document).ready(function() {
 		console.log(theTabColor);
 		// The complex attribute is what contains the amount of subtasks an item has. If it more than 0, this takes away the status bar, and line 55 is where it adds the grey circle.
 		if (amount > 0) {
-			$(this).html('<div class="tasksDetailsBox">' + '<p class="tasksName">' + 'Pick up groceriesWWWWWWWW' + '</p>' + '<p class="tasksDate">' + 'Date' + '</p>' + '<span class="arrow">' + '<i class="fa fa-angle-right" aria-hidden="true"></i>' + '</span>' + '</div>');
+			$(this).html('<div class="tasksDetailsBox">' + '<p class="tasksName">' + 'Pick up groceriesWWWWWWWW' + '</p>' + '<p class="tasksDate">' + 'Date' + '</p>' + '</div>');
 		}
 		//this is for if it is 0 and needs to have a status bar.
 		else { //right here, just put in a variable for the title. Not groceries.
-			$(this).html('<div class="tasksDetailsBox" style="padding-left: 8px; border-left: 4px solid ' + theTabColor + '">' + '<p class="tasksName">' + 'Pick up groceries' + '</p>' + '<p class="tasksDate">' + 'Date' + '</p>' + '<span class="arrow">' + '<i class="fa fa-angle-right" aria-hidden="true"></i>' + '</span>' + '</div>');
+			$(this).html('<div class="tasksDetailsBox" style="padding-left: 8px; border-left: 4px solid ' + theTabColor + '">' + '<p class="tasksName">' + 'Pick up groceries' + '</p>' + '<p class="tasksDate">' + 'Date' + '</p>' + '</div>');
 		}
 	});
 	$('.overdueBox').html('<p class="overdueText">' + 'You have ' + '<span class="bigNum">' + overdue + '</span>' + ' OVERDUE TASKS </p>');
