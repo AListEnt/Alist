@@ -61,4 +61,20 @@ var theTab = $(this).find('.' + thePage);
 $(theTab).css('background-color', "#d9e9f5");
 	});
 	
+	$('.tasksName').each(function(){
+	var titleText = $(this).html();
+	var newTitle = titleText.slice(0, -4);
+var titleLength = $(this)[0].clientWidth;
+if(titleLength >= 246){
+	console.log($(this))
+	$(this)[0].innerHTML = newTitle + '...';
+}
+
+
+
+
+});
+	
+	
+	
 });
