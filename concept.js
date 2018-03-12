@@ -49,6 +49,7 @@ $(document).ready(function() {
 			$(this).prepend('<div class="complexBox upBox">' + '<p class="complexText">' + amount + '</p>' + '<i class="fa fa-angle-down">' + '</i>' + '</div>');
 		}
 	});
+
 	$('.complexBox').click(function() {
 		var boxParents = $(this).parent();
 		var amount = $(boxParents)[0].dataset.complex;
@@ -74,7 +75,10 @@ if(titleLength >= 246){
 
 
 });
+	$('#link').click(function(){
+	 $("#ex1").modal({
 	
-	
-	
+  fadeDuration: 100
+});
+	});
 });
