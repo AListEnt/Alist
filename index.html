@@ -8,8 +8,9 @@
 	<link href="Alist.css" rel="stylesheet" type="text/css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 	</script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js">
+	</script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" rel="stylesheet">
 	<link href="dcalendar.picker.css" rel="stylesheet">
 	<script src="concept.js">
 	</script>
@@ -30,59 +31,23 @@
 					<h3 id="navDate">January 14, 2018</h3>
 				</div>
 			</div>
-			<p><a href="#ex1" rel="modal:open">Test</a></p>
-			<div id="ex1" class="modal">
-  <div>
-  <h1>Add actions popup example...</h1>
-						<div class="task">
-							<div class="tasksDetails">
-								<p class="tasksName">Pick up trash from party.</p>
-								<p class="tasksDate">Date</p>
-							</div>
-							<div class="sliderBox">
-								<label class="switch"><input class="slide" type="checkbox"> <span class="slider" data-bg="" id="sliderTest"></span></label>
-							</div>
+			<div class="modal" id="ex1">
+				<div>
+					<h1 class="addTaskText">Add a task</h1>
+					<div class="createTask">
+						<div class="field createName calendarBlock">
+							<form action="" class="calendarBlock create">
+								<input class="calendarBlock createBox" name="fname" placeholder="Name of task" type="text">
+							</form>
 						</div>
-						<div class="task">
-							<div class="tasksDetails">
-								<p class="tasksName">Pickup friends from gym.</p>
-								<p class="tasksDate">Date</p>
-							</div>
-							<div class="sliderBox">
-								<label class="switch"><input class="slide" type="checkbox"> <span class="slider" data-bg=""></span></label>
-							</div>
+						<div class="field createDate calendarBlock">
+							<form action="" class="calendarBlock create">
+								<input class="calendarBlock createBox" name="fname" placeholder="xx/xx/xxxx" type="text">
+							</form>
 						</div>
-						<div class="task" data-complex="0">
-							<div class="tasksDetails" data-complex="0">
-								<p class="tasksName">Plan an event</p>
-								<p class="tasksDate">Date</p>
-							</div>
-							<div class="sliderBox">
-								<label class="switch"><input class="slide" type="checkbox"> <span class="slider" id="sliderTest2"></span></label>
-							</div>
-						</div>
-						<div class="task" data-complex="5">
-							<div class="tasksDetails" data-complex="5">
-								<p class="tasksName">Solicit reviews</p>
-								<p class="tasksDate">Date</p>
-							</div>
-							<div class="sliderBox">
-								<label class="switch"><input class="slide" type="checkbox"> <span class="slider" data-bg=""></span></label>
-							</div>
-						</div>
-						<div class="task" data-complex="9">
-							<div class="tasksDetails" data-complex="9">
-								<p class="tasksName">Buy a new car for road trip.</p>
-								<p class="tasksDate">Date</p>
-							</div>
-							<div class="sliderBox">
-								<label class="switch"><input class="slide" type="checkbox"> <span class="slider" data-bg=""></span></label>
-							</div>
-					
-				</div>
-  </div>
-  <a href="#" rel="modal:close">Close</a>
-</div>
+					</div>
+				</div><a class="taskClose" href="#" rel="modal:close">Cancel</a>
+			</div>
 			<div class="panelTabs">
 				<div class="tab dash">
 					<div class="tabPic"><img src="today.png"></div>
@@ -183,7 +148,7 @@
 							</div>
 						</div>
 						<div class="event">
-						<div class="eventDetails" style="padding-left: 8px; border-left: 4px solid rgb(39, 135, 201)">
+							<div class="eventDetails" style="padding-left: 8px; border-left: 4px solid rgb(39, 135, 201)">
 								<p class="eventName">Cheri Workout</p>
 								<p class="eventDate">Date</p>
 							</div>
@@ -211,7 +176,7 @@
 								<p class="tasksBtnText">Tasks</p>
 							</div>
 							<div class="tasksAddBox">
-								<p class="tasksAddBtn">(+)</p>
+								<p class="tasksAddBtn"><a href="#ex1" id="link">(+)</a></p>
 							</div>
 						</div>
 						<div class="overdueBox"></div>
