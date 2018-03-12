@@ -19,7 +19,7 @@ $(document).ready(function() {
 			$(this).html('<div class="tasksDetailsBox" style="padding-left: 8px; border-left: 4px solid ' + theTabColor + '">' + '<p class="tasksName">' + 'Pick up groceries' + '</p>' + '<p class="tasksDate">' + 'Date' + '</p>' + '</div>');
 		}
 	});
-	$('.overdueBox').html('<p class="overdueText">' + 'You have ' + '<span class="bigNum">' + overdue + '</span>' + ' OVERDUE TASKS </p>');
+	$('.overdueBox').html('<div class="overdueText">' + 'You have ' + '<span class="bigNum">' + overdue + '</span>' + ' OVERDUE TASKS </div>');
 	if (overdue == 0) {
 		$('.overdueBox').remove();
 	}
