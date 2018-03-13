@@ -16,7 +16,7 @@ $(document).ready(function() {
 		}
 		//this is for if it is 0 and needs to have a status bar.
 		else { //right here, just put in a variable for the title. Not groceries.
-			$(this).html('<div class="tasksDetailsBox" style="padding-left: 8px; border-left: 4px solid ' + theTabColor + '">' + '<p class="tasksName">' + 'Pick up groceries' + '</p>' + '<p class="tasksDate">' + 'Date' + '</p>' + '</div>');
+			$(this).html('<div class="tasksDetailsBox" style="padding-left: 8px; border-left: 4px solid ' + theTabColor + '">' + '<p class="tasksName">' + 'Pick up groceries' + '</p>' + '<p class="tasksDate">' + 'January 14, 2018' + '</p>' + '</div>');
 		}
 	});
 	$('.overdueBox').html('<div class="overdueText">' + 'You have ' + '<span class="bigNum">' + overdue + '</span>' + ' OVERDUE TASKS </div>');
@@ -49,36 +49,62 @@ $(document).ready(function() {
 			$(this).prepend('<div class="complexBox upBox">' + '<p class="complexText">' + amount + '</p>' + '<i class="fa fa-angle-down">' + '</i>' + '</div>');
 		}
 	});
-
 	$('.complexBox').click(function() {
 		var boxParents = $(this).parent();
 		var amount = $(boxParents)[0].dataset.complex;
 		$(this).toggleClass('blueBg');
 	});
-	
-		$('.navPanel').each(function() {
-var thePage = $(this)[0].dataset.page;
-var theTab = $(this).find('.' + thePage);
-$(theTab).css('background-color', "#d9e9f5");
+	$('.navPanel').each(function() {
+		var thePage = $(this)[0].dataset.page;
+		var theTab = $(this).find('.' + thePage);
+		$(theTab).css('background-color', "#d9e9f5");
 	});
-	
-	$('.tasksName').each(function(){
-	var titleText = $(this).html();
-	var newTitle = titleText.slice(0, -4);
-var titleLength = $(this)[0].clientWidth;
-if(titleLength >= 246){
-	console.log($(this))
-	$(this)[0].innerHTML = newTitle + '...';
-}
-
-
-
-
-});
-	$('#link').click(function(){
-	 $("#ex1").modal({
-	
-  fadeDuration: 100
-});
+	$('.tasksName').each(function() {
+		var titleText = $(this).html();
+		var newTitle = titleText.slice(0, -4);
+		var titleLength = $(this)[0].clientWidth;
+		if (titleLength >= 246) {
+			console.log($(this))
+			$(this)[0].innerHTML = newTitle + '...';
+		}
+	});
+	$('#link').click(function() {
+		$("#ex1").modal({
+			fadeDuration: 100
+		});
+	});
+	$('.tasksDetailsBox').click(function() {
+		var taskModal = $("#ex2").modal();
+		var taskBuild = $(this).closest('.task')[0].outerHTML;
+		//console.log();
+		$("#ex2").modal({
+			fadeDuration: 100
+		});
+		$('#ex2').html(taskBuild);
+		//$('#ex2').find('.slider').remove();
+		$('#ex2').find('.tasksName')[0].innerText;
+		var borderColor = 'solid 4px ' + $('#ex2').find('.tasksDetailsBox')[0].style.borderLeftColor;
+		console.log(borderColor);
+		$('#ex2').css('border', borderColor);
+		console.log($('#ex2')[0].offsetWidth);
+		var borderAdd = $('#ex2').find('.task');
+		var taskTitle = $('#ex2').find('.tasksName')[0].innerText;
+		var taskDate = $('#ex2').find('.tasksDate')[0].innerText;
+		var recordId = "task attribute before removed";
+		var taskNotes = "Dummy Text";
+		$('#ex2').append('<a class="doneBtn">Done</a><div class="popNameBox" data-record="">' + '<h2 class="popNameLabel">Name:</h2>' + '<div class="popTitle" contenteditable="true">' + taskTitle + '</div>' + '</div>' + '<div class="calendarPopup">' + '<div id="calendar-popup"></div>' + '</div>' + +'<div class="dateBox">' + '<h2 class="popDateLabel">Date:</h2>' + '<div class="popDate">' + taskDate + '</div>' + '</div>' + '<div class="notesBox">' + '<h2 class="popNotesLabel"> Notes:</h2>' + '<div class="popNotes" contenteditable="true">' + taskNotes + '</div>' + '</div>' + '<div class="pinnedBox">' + '<h2 class="popPinnedLabel"> Pinned:</h2>' + '<div class="popPinned">' + '<select> <option value="no">No</option> <option value="yes">Yes</option></select>' + '</div>' + '</div>' + '<div class="statusBox">' + '<h2 class="popStatusLabel"> Status:</h2>' + '<div class="popStatus">' + '</div>' + '</div>');
+		$('#calendar-popup').dcalendar();
+		//Set the value of recordId, to another variable, that has the value of the task div record, before the task div is removed.
+		$('.popNameBox').attr("data-record", recordId);
+		$('#ex2').find('.sliderBox').appendTo('.popStatus');
+		$('.popStatus').find('.sliderBox').addClass('popSlider');
+		$('#ex2').find('.task').remove();
+		$('.doneBtn').click(function() {
+			var newName = $('#ex2').find('.popTitle')[0].innerText;
+			var newDate = $('#ex2').find('.popDate')[0].innerText;
+			var newNotes = $('#ex2').find('.popNotes')[0].innerText;
+			console.log(newName, newDate, newNotes);
+			// On click of done button set values to new values.
+		});
 	});
 });
