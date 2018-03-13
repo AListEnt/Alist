@@ -6,7 +6,6 @@
 	display: inline-block;
 	position: relative;
 	float: left;
-	z-index: 3;
 }
 body {
 	width: 100%;
@@ -19,26 +18,29 @@ html, body {
 	min-height: 100%;
 }
 * {}
+.new {
+	width: 700px;
+}
 .infoBox {
 	width: 100%;
 	height: 150px;
 	border-bottom: 1px solid lightgrey;
 }
-.createTask{
-width:100%;
-height:100%;
-display:flex;
-flex-wrap:wrap;
+.createTask {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
 }
-.nameText{
-	display:flex;
-	float:left;
-	margin-left:10px;
-	margin-top:8px;
+.nameText {
+	display: flex;
+	float: left;
+	margin-left: 10px;
+	margin-top: 8px;
 }
-.field{
-flex-basis:100%;
-	height:35px;
+.field {
+	flex-basis: 100%;
+	height: 35px;
 }
 .nameBox {
 	height: 60px;
@@ -342,56 +344,69 @@ ul {
 	margin-left: 20px;
 	margin-right: 10px;
 }
-.createName{
-
-	margin-bottom:10px;
+.calendarPopup {
+	flex-basis: 260px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	height: 200px;
+	position: relative;
+	float: right;
+	top: 20px;
+	text-align: center;
+	background-color: white;
+	margin-left: 20px;
+	margin-right: 10px;
 }
-.addTaskText{
+.createName {
+	margin-bottom: 10px;
+}
+.addTaskText {
 	font: 200 1.5em/1.3em 'Mukta Malar';
 }
-#ex1{
-	text-align:center;
+#ex1 {
+	text-align: center;
 }
-#link{
-	text-decoration:none;
-	color:white;
+#link {
+	text-decoration: none;
+	color: white;
+	cursor: pointer;
 }
-.createBox{
-	width:100%;
-	height:100%;
-			border-radius:5px;
-	border:1px solid #E6EAEA;
-	background-color:#f9fafb;
+.createBox {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	border: 1px solid #E6EAEA;
+	background-color: #f9fafb;
 }
-.createBox::placeholder{
-color:lightgrey;
-text-indent:5px;
+.createBox::placeholder {
+	color: lightgrey;
+	text-indent: 5px;
 }
-.createDate{
-	margin-bottom:10px;
+.createDate {
+	margin-bottom: 10px;
 }
-.taskClose{
-	margin-top:15px;
-	text-decoration:none;
-	color:white;
-	font-weight:200;
-	font-family:'Mukta Malar';
-	width:50px;
-	height:15px;
-	padding-bottom:10px;
-	display:inline-block;
-	position:relative;
-	left:50%;
-	margin-left:-435px;
-	border-radius:5px;
-	background-color:#E64759;
+.taskClose {
+	margin-top: 15px;
+	text-decoration: none;
+	color: white;
+	font-weight: 200;
+	font-family: 'Mukta Malar';
+	width: 50px;
+	height: 15px;
+	padding-bottom: 10px;
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	margin-left: -435px;
+	border-radius: 5px;
+	background-color: #E64759;
 }
-input:focus{
-    outline: none;
-    }
-.create{
-	width:100%;
-	height:35px;
+input:focus {
+	outline: none;
+}
+.create {
+	width: 100%;
+	height: 35px;
 }
 #dummyText {
 	vertical-align: middle;
@@ -415,14 +430,14 @@ input:focus{
 	margin-left: 10px;
 }
 .eventsTab {
-    width: 100%;
-    background-color: #a5c03e;
-    padding-bottom: 0px;
-    height: 35px;
-      justify-content:space-between;
-    text-align: center;
-    cursor: pointer;
-    display: flex;
+	width: 100%;
+	background-color: #a5c03e;
+	padding-bottom: 0px;
+	height: 35px;
+	justify-content: space-between;
+	text-align: center;
+	cursor: pointer;
+	display: flex;
 }
 .projectsTab {
 	width: 100%;
@@ -446,10 +461,10 @@ input:focus{
 }
 .eventsTabText {
 	font: 400 1.5em/1.3em 'Mukta Malar';
- display:flex;
-   flex-basis:50px;
-   flex-shrink:1;
-    margin-top: 7px;
+	display: flex;
+	flex-basis: 50px;
+	flex-shrink: 1;
+	margin-top: 7px;
 }
 .event {
 	font: 400 .8em/1.3em 'Mukta Malar';
@@ -469,7 +484,7 @@ input:focus{
 }
 .eventDetails {
 	position: relative;
-margin-left: 15px;
+	margin-left: 15px;
 	top: 10%;
 	height: 40px;
 	display: inline-block;
@@ -548,14 +563,14 @@ margin-left: 15px;
 	font-size: 25px;
 }
 .overdueText {
-    font: 600 1.5em/1.3em 'Mukta Malar';
-    margin: 0px;
-    margin-top: 5px;
-    position: relative;
-    border-left: 4px solid #ce0b24;
-    padding: 10px;
-    padding-left: 5px;
-    margin-left: 15px;
+	font: 600 1.5em/1.3em 'Mukta Malar';
+	margin: 0px;
+	margin-top: 5px;
+	position: relative;
+	border-left: 4px solid #ce0b24;
+	padding: 10px;
+	padding-left: 5px;
+	margin-left: 15px;
 }
 .tasksName {
 	font: 600 1.5em/1.3em 'Mukta Malar';
@@ -585,16 +600,154 @@ margin-left: 15px;
 	color: white;
 }
 .tasksDetails {
-	    position: relative;
-    top: 10%;
-    display: inline-block;
-    margin-left: 15px;
+	position: relative;
+	top: 10%;
+	display: inline-block;
+	margin-left: 15px;
+}
+.tasksDetailsBox {
+	cursor: pointer;
 }
 .slider {
 	position: absolute;
 	left: 85%;
 	top: 19%;
 	display: inline-block;
+}
+.detailTaskText {
+	text-align: center;
+	font: 200 1.25em/1.3em 'Mukta Malar';
+}
+.popTitle {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 22.5px;
+}
+.popNameLabel {
+	font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 20.5px;
+}
+.popNameBox {
+	width: 100%;
+	height: 45px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+}
+.popDateLabel {
+	font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 20.5px;
+}
+.popDate {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 22.5px;
+}
+[contenteditable]:focus {
+	outline: none;
+}
+.dateBox {
+	width: 100%;
+	height: 45px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+}
+.popNotes {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	max-width: 470px;
+	margin-left: 10px;
+	margin-top: 22.5px;
+}
+.notesBox {
+	width: 100%;
+	min-height: 45px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+}
+.popNotesLabel {
+	font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	margin-left: 15px;
+	color: grey;
+	margin-top: 20.5px;
+}
+.pinnedBox {
+	width: 100%;
+	height: 45px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+}
+.popPinnedLabel {
+	font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 10.5px;
+}
+.popPinned {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 11.5px;
+}
+.statusBox {
+	width: 100%;
+	height: 45px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+}
+.popStatusLabel {
+	font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 10.5px;
+}
+.popStatus {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 22.5px;
+}
+#ex2 {
+	text-align: center;
+	height: 500px;
 }
 #sliderTest {
 	position: absolute;
@@ -611,14 +764,14 @@ margin-left: 15px;
 	margin: 0px;
 }
 .tasksTab {
-    width: 100%;
-    background-color: #2787c9;
-    padding-bottom: 0px;
-    height: 35px;
-      justify-content:space-between;
-    text-align: center;
-    cursor: pointer;
-    display: flex;
+	width: 100%;
+	background-color: #2787c9;
+	padding-bottom: 0px;
+	height: 35px;
+	justify-content: space-between;
+	text-align: center;
+	cursor: pointer;
+	display: flex;
 }
 .tasksTabText {
 	font: 400 1.5em/1.3em 'Mukta Malar';
@@ -642,26 +795,26 @@ margin-left: 15px;
 	display: inline-block;
 }
 .tasksTabText {
-  display:flex;
-   flex-basis:50px;
-   flex-shrink:1;
-    margin-top: 7px;
+	display: flex;
+	flex-basis: 50px;
+	flex-shrink: 1;
+	margin-top: 7px;
 }
 .tasksAddBox {
- font: 400 1.5em/1.3em 'Mukta Malar';
-    position: relative;
-   flex-basis:50px;
-    color: white;
-    display:flex;
-    flex-shrink:1;
-        margin-top: 7px;
+	font: 400 1.5em/1.3em 'Mukta Malar';
+	position: relative;
+	flex-basis: 50px;
+	color: white;
+	display: flex;
+	flex-shrink: 1;
+	margin-top: 7px;
 }
 .eventsAddBox {
 	font: 400 1.5em/1.3em 'Mukta Malar';
-flex-basis:50px;
-    display:flex;
-    flex-shrink:1;
-     margin-top: 7px;
+	flex-basis: 50px;
+	display: flex;
+	flex-shrink: 1;
+	margin-top: 7px;
 }
 .projectsAddBtn {
 	font: 400 1.0em/1.3em 'Mukta Malar';
@@ -681,40 +834,39 @@ flex-basis:50px;
 	display: inline-block;
 }
 .eventsAddBtn {
-   font: 400 1.0em/1.3em 'Mukta Malar';
-    position: relative;
-    color: white;
-    margin: 0px;
-    float:right;
-    margin-right:20px;
-    margin-top: -5px;
+	font: 400 1.0em/1.3em 'Mukta Malar';
+	position: relative;
+	color: white;
+	margin: 0px;
+	float: right;
+	margin-right: 20px;
+	margin-top: -5px;
 }
 .eventsBtnText {
-	    font: 400 1.0em/1.3em 'Mukta Malar';
-    position: relative;
-    color: white;
-    margin: 0px;
-    float:left;
-    margin-left:10px;
-    margin-top: -5px;
+	font: 400 1.0em/1.3em 'Mukta Malar';
+	position: relative;
+	color: white;
+	margin: 0px;
+	float: left;
+	margin-left: 10px;
+	margin-top: -5px;
 }
 .tasksAddBtn {
-     font: 400 1.0em/1.3em 'Mukta Malar';
-    position: relative;
-    color: white;
-    margin: 0px;
-    
-    margin-right:20px;
-    margin-top: -5px;
+	font: 400 1.0em/1.3em 'Mukta Malar';
+	position: relative;
+	color: white;
+	margin: 0px;
+	margin-right: 20px;
+	margin-top: -5px;
 }
 .tasksBtnText {
-  font: 400 1.0em/1.3em 'Mukta Malar';
-    position: relative;
-    color: white;
-    margin: 0px;
-    float:left;
-    margin-left:10px;
-    margin-top: -5px;
+	font: 400 1.0em/1.3em 'Mukta Malar';
+	position: relative;
+	color: white;
+	margin: 0px;
+	float: left;
+	margin-left: 10px;
+	margin-top: -5px;
 }
 .switch {
 	position: relative;
@@ -741,6 +893,12 @@ flex-basis:50px;
 	position: absolute;
 	left: 80%;
 	margin-top: 10px;
+	display: inline-block;
+}
+.popSlider {
+	position: absolute;
+	left: 17%;
+	margin-top: -15px;
 	display: inline-block;
 }
 .slider:before {
@@ -812,6 +970,18 @@ input:checked+.slider:before {
 	right: 6.5px;
 	color: white;
 }
+.doneBtn {
+	width: 40px;
+	color: black;
+	cursor: pointer;
+	left: 85%;
+	border-radius: 5px;
+	position: absolute;
+	text-decoration: none;
+	border: 0.5px solid black;
+	padding: 3.5px;
+	font: 200 1.25em/1.3em 'Mukta Malar';
+}
 .complexText {
 	margin-left: 5.75px;
 }
@@ -829,37 +999,30 @@ input:checked+.slider:before {
 	width: 20px;
 	cursor: pointer;
 }
-@media screen and (max-width:1720px) {
-
-
+.modal {
+	max-width: 700px;
+	width: 700px;
 }
+@media screen and (max-width:1720px) {}
 @media screen and (max-width:1680px) {
 	.mainTemp {
 		left: 70%;
 	}
-
-	
 }
 @media screen and (max-width:1480px) {
 	.mainTemp {
 		left: 65%;
 	}
-
-
 }
 @media screen and (max-width:1380px) {
 	.mainTemp {
 		left: 60%;
 	}
-
-
 }
 @media screen and (max-width:1240px) {
 	.tasksBox {
 		flex-basis: 100%;
 	}
-
-
 	.mainTemp {
 		left: 38%;
 	}
@@ -886,10 +1049,5 @@ input:checked+.slider:before {
 		margin-right: 10px;
 	}
 }
-@media screen and (max-width:1075px) {
-
-
-}
-@media screen and (max-width:985px) {
-
-}
+@media screen and (max-width:1075px) {}
+@media screen and (max-width:985px) {}
