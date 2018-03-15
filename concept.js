@@ -16,7 +16,7 @@ $(document).ready(function() {
 		}
 		//this is for if it is 0 and needs to have a status bar.
 		else { //right here, just put in a variable for the title. Not groceries.
-			$(this).html('<div class="tasksDetailsBox" style="padding-left: 8px; border-left: 4px solid ' + theTabColor + '">' + '<p class="tasksName">' + 'Pick up groceries' + '</p>' + '<p class="tasksDate">' + 'January 14, 2018' + '</p>' + '</div>');
+			$(this).html('<div class="tasksDetailsBox" style="padding-left: 8px; border-left: 4px solid ' + theTabColor + '">' + '<p class="tasksName">' + 'Pick up groceries' + '</p>' + '<p class="tasksDate">' + '01/08/2018' + '</p>' + '</div>');
 		}
 	});
 	$('.overdueBox').html('<div class="overdueText">' + 'You have ' + '<span class="bigNum">' + overdue + '</span>' + ' OVERDUE TASKS </div>');
@@ -72,6 +72,10 @@ $(document).ready(function() {
 		$("#ex1").modal({
 			fadeDuration: 100
 		});
+		$('#ex1').append('<a class="doneBtn">Done</a><div class="popNameBox" data-record="">' + '<h2 class="popNameLabel">Name:</h2>' + '<div class="popTitle" contenteditable="true"> Name Here' + '</div>' + '</div>' + '<div class="dateBox">' + '<h2 class="popDateLabel">Date:</h2>' + '<input class="popDate">' + '</input>' + '</div>' + '<div class="pinnedBox">' + '<h2 class="popPinnedLabel"> Pinned:</h2>' + '<div class="popPinned">' + '<select> <option value="no">No</option> <option value="yes">Yes</option></select>' + '</div>' + '</div>' + '<div class="repeatBox">' + '<h2 class="popRepeatLabel"> Repeat:</h2>' + '<div class="popRepeat">' + '<select> <option value="no">No</option> <option value="yes">Yes</option></select>' + '</div>' + '</div>' + '<div class="endRepeatBox">' + '<h2 class="popEndRepeatLabel"> End Repeat:</h2>' + '<div class="popEndRepeat">' + '<select> <option value="no">No</option> <option value="yes">Yes</option></select>' + '</div>' + '</div>' + '<div class="multiBox">' + '<h2 class="popShareLabel"> Share:</h2>' + '<div class="shareText">Test </div>' + '<h2 class="popAlertLabel"> Alert:</h2>' + '<div class="alertText"> Every Friday</div>' + '</div>' + '</div>'
+			//+ '<div class="notesBox">' + '<h2 class="popNotesLabel"> Notes:</h2>' + '<div class="popNotes">' + taskShort + '</div>' + '</div>'
+		);
+		$('.popDate').dcalendarpicker();
 	});
 	$('.tasksDetailsBox').click(function() {
 		var taskModal = $("#ex2").modal();
@@ -84,6 +88,7 @@ $(document).ready(function() {
 		//$('#ex2').find('.slider').remove();
 		$('#ex2').find('.tasksName')[0].innerText;
 		var borderColor = 'solid 4px ' + $('#ex2').find('.tasksDetailsBox')[0].style.borderLeftColor;
+		var status = $('#ex2').find('.tasksDetailsBox')[0].style.borderLeftColor;
 		console.log(borderColor);
 		$('#ex2').css('border', borderColor);
 		console.log($('#ex2')[0].offsetWidth);
@@ -91,9 +96,13 @@ $(document).ready(function() {
 		var taskTitle = $('#ex2').find('.tasksName')[0].innerText;
 		var taskDate = $('#ex2').find('.tasksDate')[0].innerText;
 		var recordId = "task attribute before removed";
-		var taskNotes = "Dummy Text";
-		$('#ex2').append('<a class="doneBtn">Done</a><div class="popNameBox" data-record="">' + '<h2 class="popNameLabel">Name:</h2>' + '<div class="popTitle" contenteditable="true">' + taskTitle + '</div>' + '</div>' + '<div class="calendarPopup">' + '<div id="calendar-popup"></div>' + '</div>' + +'<div class="dateBox">' + '<h2 class="popDateLabel">Date:</h2>' + '<div class="popDate">' + taskDate + '</div>' + '</div>' + '<div class="notesBox">' + '<h2 class="popNotesLabel"> Notes:</h2>' + '<div class="popNotes" contenteditable="true">' + taskNotes + '</div>' + '</div>' + '<div class="pinnedBox">' + '<h2 class="popPinnedLabel"> Pinned:</h2>' + '<div class="popPinned">' + '<select> <option value="no">No</option> <option value="yes">Yes</option></select>' + '</div>' + '</div>' + '<div class="statusBox">' + '<h2 class="popStatusLabel"> Status:</h2>' + '<div class="popStatus">' + '</div>' + '</div>');
+		var taskNotes = "Dummy Text for display.";
+		var taskShort = "Dummy T..";
+		var createDate = "The date it was made";
+		$('#ex2').append('<h1 class="detailTaskText" style="color:' + status + ';">Task Detail</h1>' + '<a class="doneBtn">Done</a><div class="popNameBox" data-record="">' + '<h2 class="popNameLabel">Task</h2>' + '<div class="popTitle" contenteditable="true">' + taskTitle + '</div>' + '</div>' + '<div class="calendarPopup"> <div id="calendar-popup"></div> </div>' + '<div class="dateBox">' + '<h2 class="popDateLabel">Due Date</h2>' + '<input class="popDate">' + '</input>' + '</div>' + '<div class="statusBox">' + '<h2 class="popStatusLabel"> Status:</h2>' + '<div class="popStatus">' + '</div>' + '</div>' + '<div class="pinnedBox">' + '<h2 class="popPinnedLabel"> Pin To Dashboard</h2>' + '<div class="popPinned">' + '<select> <option value="no">No</option> <option value="yes">Yes</option></select>' + '</div>' + '</div>' + '<div class="repeatBox">' + '<h2 class="popRepeatLabel"> Repeat</h2>' + '<div class="popRepeat">' + '<select> <option value="no">No</option> <option value="daily">Daily</option> <option value="weekly">Weekly</option><option value="monthly">Monthly</option><option value="yearly">Yearly</option></select>' + '</div>' + '</div>' + '<div class="endRepeatBox">' + '<h2 class="popEndRepeatLabel"> End Repeat</h2>' + '<div class="popEndRepeat">' + '<input class="endRepeatDate">' + '</input>' + '</div>' + '</div>' + '<div class="createDateBox">' + '<h2 class="popCreateLabel"> Created On</h2>' + '<div class="createText">' + createDate + '</div>' + '</div>' + '<div class="shareBox">' + '<h2 class="popShareLabel"> Share</h2>' + '<div class="shareText">Test </div>' + '</div>' + '<div class="alertBox">' + '<h2 class="popAlertLabel"> Alert</h2>' + '<div class="alertText"> Every Friday</div>' + '<input class="alertDate">' + '</input>' + '</div>' + '<div class="sTaskBox">' + '<h2 class="popSTaskLabel">(+) Subtasks</h2>' + '<div class="sTaskText">' + 'You have 0 subtasks.' + '</div>' + '</div>' + '<div class="additionalBox">' + '<h2 class="popAdditionalLabel">Additional Info</h2>' + '</div>' + '<div class="memoBox">' + '<h2 class="popMemoLabel">(+) Memo</h2>' + '<div class="memoText">' + 'The Memo text.' + '</div>' + '</div>' + '<div class="contactBox">' + '<h2 class="popContactLabel">(+) Contact</h2>' + '<div class="contactText">' + 'Your Contacts.' + '</div>' + '</div>' + '<div class="eventBox">' + '<h2 class="popEventLabel">(+) Events</h2>' + '<div class="eventText">' + 'This task has 0 events.' + '</div>' + '</div>' + '<div class="notesBox">' + '<h2 class="popNotesLabel">(+) Notes</h2>' + '<div class="popNotes">' + taskShort + '</div>' + '</div>' + '<div class="projectBox">' + '<h2 class="popProjectLabel">(+) Projects</h2>' + '<div class="projectText">' + 'This task has 0 projects.' + '</div>' + '</div>' + '<div class="imageBox">' + '<h2 class="popImageLabel">(+) Image</h2>' + '<div class="imageText">' + 'This task has 0 images.' + '</div>' + '</div>');
+		$('.popDate').val($('#ex2').find('.tasksDate')[0].innerText);
 		$('#calendar-popup').dcalendar();
+		$('#ex2').find('.calendar-head-card').css('background-color', status);
 		//Set the value of recordId, to another variable, that has the value of the task div record, before the task div is removed.
 		$('.popNameBox').attr("data-record", recordId);
 		$('#ex2').find('.sliderBox').appendTo('.popStatus');
@@ -106,5 +115,26 @@ $(document).ready(function() {
 			console.log(newName, newDate, newNotes);
 			// On click of done button set values to new values.
 		});
+		$('#calendar-popup').dcalendarpicker({
+			format: 'mm-dd-yyyy'
+		}).on('datechanged', function(e) {
+			var d = e.date;
+			selectedDate = moment(d, 'MM-DD-YYYY');
+			var theDate = selectedDate._i;
+			$('.popDate').val(theDate);
+			var weekdayLongform = selectedDate.format("dddd, MMMM");
+			var dateLongform = selectedDate.format(" D");
+			var yearLongform = selectedDate.format(" YYYY");
+			$('#dashboardSelectedWeekdayAndMonth').html(weekdayLongform);
+			$('#dashboardSelectedDate').html(dateLongform);
+			$('#dashboardSelectedComma').html(",");
+			$('#dashboardSelectedYear').html(yearLongform);
+			$('.navDateText').html(weekdayLongform);
+		});
+	});
+	$('.popNotes').click(function() {
+		prompt('Enter Task Notes:', taskNotes);
+		var notesAnswer = prompt('Enter Task Notes:', taskNotes);
+		taskNotes = notesAnswer;
 	});
 });
