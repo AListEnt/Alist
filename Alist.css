@@ -345,17 +345,19 @@ ul {
 	margin-right: 10px;
 }
 .calendarPopup {
-	flex-basis: 260px;
-	flex-grow: 1;
-	flex-shrink: 1;
-	height: 200px;
-	position: relative;
-	float: right;
-	top: 20px;
-	text-align: center;
-	background-color: white;
-	margin-left: 20px;
-	margin-right: 10px;
+    flex-basis: 260px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 230px;
+    position: absolute;
+    float: right;
+    top: 80px;
+    border: 1px solid #eaeaea;
+    text-align: center;
+    background-color: white;
+    margin-left: 20px;
+    left: 52%;
+    margin-right: 10px;
 }
 .createName {
 	margin-bottom: 10px;
@@ -616,6 +618,12 @@ input:focus {
 }
 .detailTaskText {
 	text-align: center;
+	margin:0px;
+	width:100px;
+	height:20px;
+position:relative;
+left:50%;
+margin-left:-50px;
 	font: 200 1.25em/1.3em 'Mukta Malar';
 }
 .popTitle {
@@ -650,16 +658,29 @@ input:focus {
 	height: 35px;
 	color: grey;
 	margin-left: 15px;
-	margin-top: 20.5px;
+	margin-top: 17.5px;
+}
+.alertDate {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 20px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 5.5px;
+	border-radius:5px;
+	border:solid 1px  #eaeaea;
 }
 .popDate {
 	font: 200 1.15em/1.3em 'Mukta Malar';
 	margin: 0px;
 	padding: 0px;
-	height: 35px;
+	height: 20px;
 	color: grey;
 	margin-left: 10px;
-	margin-top: 22.5px;
+	margin-top: 20.5px;
+	border-radius:5px;
+	border:solid 1px  #eaeaea;
 }
 [contenteditable]:focus {
 	outline: none;
@@ -678,11 +699,12 @@ input:focus {
 	color: grey;
 	max-width: 470px;
 	margin-left: 10px;
-	margin-top: 22.5px;
+	margin-top: 9px;
+	cursor:pointer;
 }
 .notesBox {
 	width: 100%;
-	min-height: 45px;
+	height: 30px;
 	display: flex;
 	border-bottom: 1px solid #eaeaea;
 }
@@ -693,7 +715,7 @@ input:focus {
 	height: 35px;
 	margin-left: 15px;
 	color: grey;
-	margin-top: 20.5px;
+	margin-top: 5.5px;
 }
 .pinnedBox {
 	width: 100%;
@@ -745,9 +767,341 @@ input:focus {
 	margin-left: 10px;
 	margin-top: 22.5px;
 }
+.repeatBox {
+	width: 100%;
+	height: 45px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+}
+.popRepeatLabel {
+	font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 10.5px;
+}
+.popEndRepeat {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 12.5px;
+}
+.endRepeatBox {
+	width: 100%;
+	height: 45px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+}
+.multiBox {
+width: 100%;
+    height: 45px;
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
+}
+.createDateBox {
+width: 100%;
+    height: 30px;
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
+
+}
+.alertBox {
+width: 100%;
+    height: 30px;
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
+
+}
+.shareBox {
+width: 100%;
+    height: 30px;
+    display: flex;
+    border-bottom: 1px solid #eaeaea;
+    border-top: 1px solid #eaeaea;
+
+}
+select{
+	border-radius:5px;
+}
+.createText {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 5.5px;
+}
+.shareText {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 5.5px;
+}
+.memoText {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 9px;
+}
+.popProjectLabel{
+	font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 5.5px;
+}
+.popSTaskLabel{
+font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 5.5px;
+}
+.popAdditionalLabel{
+	font: 400 1.05em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: -2.5px;
+}
+.popContactLabel{
+font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 5.5px;
+}
+.popMemoLabel{
+font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 5.5px;
+}
+ .popNotesLabel{
+font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 5.5px;
+ }
+
+.popEventLabel{
+font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 5.5px;
+}
+.popImageLabel{
+
+font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 5.5px;
+}
+
+.sTaskText {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 9px;
+}
+ .projectBox{
+width: 100%;
+	height: 30px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+ }
+  .contactBox{
+width: 100%;
+	height: 30px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+  }
+    .memoBox{
+width: 100%;
+	height: 30px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+  }
+ .eventBox{
+width: 100%;
+	height: 30px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+ }
+
+  .additionalBox{
+width: 100%;
+	height: 15px;
+	display: flex;
+	background-color:#eaeaea;
+	border-bottom: 1px solid #eaeaea;
+ }
+.imageBox{
+width: 100%;
+	height: 30px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+}
+.sTaskBox{
+width: 100%;
+	height: 30px;
+	display: flex;
+	border-bottom: 1px solid #eaeaea;
+}
+.contactText {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 9px;
+}
+.eventText {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 9px;
+}
+.imageText {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 9px;
+}
+.projectText {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 9px;
+}
+.createText {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 5.5px;
+}
+.alertText {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 5.5px;
+}
+.popCreateLabel {
+	font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 2.5px;
+}
+.popShareLabel {
+	font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 2.5px;
+}
+.popAlertLabel {
+	font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 2.5px;
+}
+.popEndRepeatLabel {
+	font: 400 1.35em/1.3em 'Mukta Malar';
+	margin: 2.5px;
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 15px;
+	margin-top: 10.5px;
+}
+.popRepeat {
+	font: 200 1.15em/1.3em 'Mukta Malar';
+	margin: 0px;
+	padding: 0px;
+	height: 35px;
+	color: grey;
+	margin-left: 10px;
+	margin-top: 12.5px;
+}
 #ex2 {
 	text-align: center;
-	height: 500px;
+	height: 650px;
+	margin-top:-80px;
 }
 #sliderTest {
 	position: absolute;
@@ -980,6 +1334,7 @@ input:checked+.slider:before {
 	text-decoration: none;
 	border: 0.5px solid black;
 	padding: 3.5px;
+	top:8px;
 	font: 200 1.25em/1.3em 'Mukta Malar';
 }
 .complexText {
