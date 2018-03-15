@@ -313,6 +313,9 @@
 .calendar-wrapper[data-theme='green'] .calendar-date-holder .calendar-dates .date.selected.current a {
 	color: #388e3c;
 }
+.current.a{
+	font-weight:bolder;
+}
 /* End color theme */
 
 body[datepicker-display='on'] {
