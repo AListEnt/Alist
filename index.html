@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js">
+	</script>
+	<script>
+	   moment().format();
+	</script>
 	<meta charset="UTF-8">
 	<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width,initial-scale=1" name="viewport">
@@ -34,24 +40,10 @@
 			<div class="modal" id="ex1">
 				<div>
 					<h1 class="addTaskText">Add a task</h1>
-					<div class="createTask">
-						<div class="field createName calendarBlock">
-							<form action="" class="calendarBlock create">
-								<input class="calendarBlock createBox" name="fname" placeholder="Name of task" type="text">
-							</form>
-						</div>
-						<div class="field createDate calendarBlock">
-							<form action="" class="calendarBlock create">
-								<input class="calendarBlock createBox" name="fname" placeholder="xx/xx/xxxx" type="text">
-							</form>
-						</div>
-					</div>
-				</div><a class="taskClose" href="#" rel="modal:close">Cancel</a>
+				</div>
 			</div>
 			<div class="modal" id="ex2">
-				<div>
-					<h1 class="detailTaskText">Task Details</h1>
-				</div>
+				<div></div>
 			</div>
 			<div class="panelTabs">
 				<div class="tab dash">
